@@ -4,7 +4,7 @@
 <h2>Edit Group</h2>
 <form method="post">
   {% csrf_token %}
-  {% load widget_tweaks %}
+  <!-- {% load widget_tweaks %} -->
   {% for field in form %}
   <div class="form-group {% if field.errors %}alert alert-danger{% endif %}">
     {{ field.errors }}

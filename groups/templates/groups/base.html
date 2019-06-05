@@ -5,25 +5,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Premier Coding Vidz</title>
+  <title>YouTube Coding Vidz</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="{% static 'custom.css' %}" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
+  <link href="//db.onlinewebfonts.com/c/261506be3344b3806eefa054f0f6fbf1?family=Tempus+Sans+ITC" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal"><a href="{% url 'home' %}" class="text-dark">Hall of Fame Vidz</a></h5>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 shadow-sm" id="navbar">
+    <div class="my-0 mr-md-auto"><a href="{% url 'home' %}">
+      <img src="{% static 'logo.png' %}" class="d-inline-block align-top" height='55' width='35%' />
+    </a></div>
     <nav class="my-2 my-md-0 mr-md-3">
       {% if user.is_authenticated %}
-      <a class="p-2 text-dark" href="{% url 'dashboard' %}">Dashboard</a>
-      <a class="p-2 text-dark" href="{% url 'logout' %}">Log Out</a>
+      <a class="p-2 text-white" href="{% url 'dashboard' %}">My Dashboard</a>
+      <a class="p-2 text-white" href="{% url 'logout' %}">Log Out</a>
       {% else %}
-      <a class="p-2 text-dark" href="{% url 'login' %}">Log In</a>
+      <a class="p-2 text-white" href="{% url 'login' %}">Log In</a>
       {% endif %}
     </nav>
     {% if user.is_authenticated == False %}
-    <a class="btn btn-outline-primary" href="{% url 'signup' %}">Sign up</a>
+    <a class="btn btn-outline-primary" href="{% url 'signup' %}">Sign Up</a>
     {% endif %}
   </div>
 
@@ -33,6 +36,12 @@
 
   {% block content %}
   {% endblock %}
+
+  <footer class="text-muted">
+      <div class="container text-center">
+        <p>© {% now 'Y' %} - P.Rollins</p>
+      </div>
+  </footer>
 
 </body>
 

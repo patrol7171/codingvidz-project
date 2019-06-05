@@ -18,10 +18,10 @@ urlpatterns = [
     path('login', auth_views.LoginView.as_view(), name='login'),
     path('logout', auth_views.LogoutView.as_view(), name='logout'),
     # Hall
-    path('vidzgroup/create', views.CreateHall.as_view(), name='create_group'),
-    path('vidzgroup/<int:pk>', views.DetailHall.as_view(), name='detail_group'),
-    path('vidzgroup/<int:pk>/update', views.UpdateHall.as_view(), name='update_group'),
-    path('vidzgroup/<int:pk>/delete', views.DeleteHall.as_view(), name='delete_group'),
+    path('vidzgroup/create', views.CreateGroup.as_view(), name='create_group'),
+    path('vidzgroup/<int:pk>', views.DetailGroup.as_view(), name='detail_group'),
+    path('vidzgroup/<int:pk>/update', views.UpdateGroup.as_view(), name='update_group'),
+    path('vidzgroup/<int:pk>/delete', views.DeleteGroup.as_view(), name='delete_group'),
     # Video
     path('vidzgroup/<int:pk>/addvideo', views.add_video, name='add_video'),
     path('video/search', views.video_search, name='video_search'),
