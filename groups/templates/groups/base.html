@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="{% static 'custom.css' %}" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
   <link href="//db.onlinewebfonts.com/c/261506be3344b3806eefa054f0f6fbf1?family=Tempus+Sans+ITC" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}">
 </head>
 
 <body>
@@ -37,9 +39,9 @@
   {% block content %}
   {% endblock %}
 
-  <footer class="text-muted">
-      <div class="container text-center">
-        <p>© {% now 'Y' %} - P.Rollins</p>
+  <footer class="footer">
+      <div class="container text-center text-muted">
+        <p>© {% now 'Y' %} - Patricia Rollins</p>
       </div>
   </footer>
 

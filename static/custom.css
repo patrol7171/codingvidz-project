@@ -21,10 +21,15 @@
   font-weight: 900;
   font-family: Tempus Sans ITC;
   color: #40BBB6;
+  text-shadow: 0 0 10px #000;
 }
 
 .jumbotron .container {
   max-width: 51rem;
+}
+
+#lead-p {
+  text-shadow: 0 0 10px #000;
 }
 
 h1, #navbar {
@@ -35,13 +40,13 @@ h1, #navbar {
   background-color:#000;
 }
 
+a {
+  color: red;
+}
+
 .btn-primary {
   background-color: #40BBB6;
   border-color: #40BBB6;
-}
-
-a {
-  color: #40BBB6;
 }
 
 .btn-outline-primary {
@@ -50,20 +55,20 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: #40BBB6;
   text-decoration: none;
 }
 
 .btn-primary:hover {
-  background-color: #F2D3FF;
+  background-color: #FFF;
   color: #40BBB6;
   border-color: #40BBB6;
 }
 
 .btn-outline-primary:hover {
   background-color:#40BBB6;
-  color:  #F2D3FF;
-  border-color:  #F2D3FF;
+  color:  #FFF;
+  border-color:  #FFF;
 }
 
 .text-white:hover {

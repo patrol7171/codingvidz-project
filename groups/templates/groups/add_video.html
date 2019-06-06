@@ -1,11 +1,11 @@
 {% extends 'groups/base.html' %}
 {% block content %}
-<div class="container">
-  <h2>Add Video to {{ group.title }}</h2>
+<div class="container pt-5">
+  <h1>Add New Video</h1>
+  <h4>To add a video to the {{ group.title }} group, enter the YouTube URL and click the button below OR use the search utility below.</h4>
   <form method="post" id="submit_video">
     {% csrf_token %}
     {% load widget_tweaks %}
-
     {% for field in form %}
     <div class="form-group {% if field.errors %}alert alert-danger{% endif %}">
       {{ field.errors }}
@@ -13,11 +13,11 @@
       {% render_field field class="form-control" %}
     </div>
     {% endfor %}
-
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary">Add Video To Group</button>
   </form>
   <br>
-  <h2>OR</h2>
+  <hr>
+  <h5>YouTube Video Search</h5>
   <form>
     {% for field in search_form %}
     <div class="form-group">
@@ -27,8 +27,10 @@
     </div>
     {% endfor %}
   </form>
-
   <div id="search_results"></div>
+  <br>
+  <h6><i><a href="{% url 'detail_group' group.id %}"><span class="oi oi-arrow-circle-left"></span> Back to the {{ group.title }} Videos page</a></i></h6>
+
   <script>
     var delayTimer;
     $('#id_search_term').keyup(function() {

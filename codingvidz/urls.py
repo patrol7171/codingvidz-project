@@ -17,7 +17,7 @@ urlpatterns = [
     path('signup', views.SignUp.as_view(), name='signup'),
     path('login', auth_views.LoginView.as_view(), name='login'),
     path('logout', auth_views.LogoutView.as_view(), name='logout'),
-    # Hall
+    # Group
     path('vidzgroup/create', views.CreateGroup.as_view(), name='create_group'),
     path('vidzgroup/<int:pk>', views.DetailGroup.as_view(), name='detail_group'),
     path('vidzgroup/<int:pk>/update', views.UpdateGroup.as_view(), name='update_group'),

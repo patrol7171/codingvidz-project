@@ -5,16 +5,14 @@
   <div class="container" id="header">
     <h1 class="jumbotron-heading">My Favorite YouTube Programming Videos</h1>
     <p class="lead text-light" id="lead-p">These helpful "go-to" videos are great for both learning and reviewing programming-related topics associated with building applications using Python. Click the button below to get started.</p>
-    <p>
-      <a href="{% url 'create_group' %}" class="btn btn-primary">Create New Video Group</a>
-    </p>
+    <p><a href="{% url 'create_group' %}" class="btn btn-primary">Create New Video Group</a></p>
   </div>
 </section>
+
 <div class="container">
   <h1 class="text-center">Popular Videos</h1>
   {% for group in popular_groups %}
   <h2><a href="{% url 'detail_group' group.id %}">{{ group.title }}</a></h2>
-
   <div class="row">
     {% for video in group.video_set.all %}
     <div class="col-md-4 mt-3">
@@ -32,9 +30,7 @@
   <br /><br />
   <h1 class="text-center">Recently Uploaded</h1>
   {% for group in recent_groups %}
-
   <h2><a href="{% url 'detail_group' group.id %}">{{ group.title }}</a></h2>
-
   <div class="row">
     {% for video in group.video_set.all %}
     <div class="col-md-4 mt-3">
@@ -48,7 +44,5 @@
     {% endfor %}
     </div>
   {% endfor %}
-
-
 </div>
 {% endblock %}
