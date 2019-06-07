@@ -27,7 +27,7 @@ if os.path.isfile(dotenv_file):
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # For Heroku only
-#SECRET_KEY = os.environ.get('App-Secret-Key')
+SECRET_KEY = os.environ.get('App-Secret-Key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
