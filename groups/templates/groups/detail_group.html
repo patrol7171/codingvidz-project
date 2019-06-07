@@ -1,9 +1,9 @@
 {% extends 'groups/base.html' %}
 {% block content %}
 <div class="container pt-3">
-  <div class="row-fluid">
-    <div class=".col-sm"><h1>{{ group.title }} Videos</h1></div>
-    <div class=".col-sm float-right"><span><b><class="text-muted">Username: {{ group.user.username }}</b></span></div>
+  <div class="row">
+    <div class="col-sm-9"><h1>{{ group.title }} Videos</h1></div>
+    <div class="col-sm-3 float-right"><span><b><class="text-muted">Group Owner(s): {{ group.user.username }}</b></span></div>
   </div>
   {% if user.id == group.user.id %}
   <i>Make changes to this group: </i>
