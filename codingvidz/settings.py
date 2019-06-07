@@ -22,12 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
+else: # For Heroku only
+    SECRET_KEY = os.environ.get('App-Secret-Key')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# For Heroku only
-SECRET_KEY = os.environ.get('App-Secret-Key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
