@@ -29,7 +29,7 @@ else: # For Heroku only
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['codingvidz-project.herokuapp.com']
 
