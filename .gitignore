@@ -49,3 +49,4 @@ coverage.xml
 
 # celery beat schedule file
 celerybeat-schedule
+.env

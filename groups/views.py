@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -13,7 +14,7 @@ import urllib
 import requests
 
 
-YOUTUBE_API_KEY = 'AIzaSyDotkkcHwH7NSA1reRB9P4wDyMCLQAk1-0'
+YOUTUBE_API_KEY = settings.API_KEY
 
 def home(request):
     recent_groups = Group.objects.all().order_by('-id')[:3]
