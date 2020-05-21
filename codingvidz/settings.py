@@ -22,8 +22,8 @@ else: # For Heroku only
     SECRET_KEY = os.environ.get('App-Secret-Key')
     API_KEY = os.environ.get('YouTube-API-Key')
 
-
 DEBUG = False
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = ['codingvidz-project.herokuapp.com']
 
@@ -128,7 +128,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 # Activate Django-Heroku
 django_heroku.settings(locals())
