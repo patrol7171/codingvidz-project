@@ -75,3 +75,11 @@ a:hover {
   color: #40BBB6 !important;
   text-decoration: none;
 }
+
+footer.footer a {
+  color: #330000 !important;
+}
+
+footer.footer a:hover {
+  color: red !important;
+}
