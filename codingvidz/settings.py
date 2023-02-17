@@ -18,8 +18,8 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
     API_KEY = os.environ.get('API_KEY')
 else: # For deployment server only
-    SECRET_KEY = os.environ.get('App-Secret-Key')
-    API_KEY = os.environ.get('YouTube-API-Key')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    API_KEY = os.environ.get('API_KEY')
 
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
