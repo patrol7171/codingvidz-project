@@ -85,9 +85,13 @@ WSGI_APPLICATION = 'codingvidz.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASES = {
+    "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+}
 
 
 # Password validation
