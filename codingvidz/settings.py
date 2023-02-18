@@ -24,7 +24,6 @@ else: # For deployment server only
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-# ALLOWED_HOSTS = ['']
 ALLOWED_HOSTS = ['*']
 
 LOGIN_URL = 'login'
@@ -85,8 +84,6 @@ WSGI_APPLICATION = 'codingvidz.wsgi.application'
 #     }
 # }
 
-# DATABASES = {}
-# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 DATABASE_URL = os.getenv("DATABASE_URL")
 DATABASES = {
     "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
@@ -127,14 +124,5 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
-
-
-
-# # Bypass ssl
-# del DATABASES['default']['OPTIONS']['sslmode']
