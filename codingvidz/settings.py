@@ -30,8 +30,8 @@ API_KEY = os.environ.get('API_KEY')
 DEBUG = True
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['.vercel.app']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
