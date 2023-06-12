@@ -26,7 +26,8 @@ else: # For deployment server only
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
