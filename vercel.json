@@ -19,7 +19,7 @@
 	],
 	"routes": [
 	  {
-		"src": "/static/(.*)",
+		"src": "codingvidz-project/static/(.*)",
 		"dest": "/static/$1"
 	  },
 	  {
