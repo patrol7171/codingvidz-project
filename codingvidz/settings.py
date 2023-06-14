@@ -13,19 +13,13 @@ import dotenv
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Use .env locally only
-# dotenv_file = os.path.join(BASE_DIR, ".env")
-# if os.path.isfile(dotenv_file):
-#     dotenv.load_dotenv(dotenv_file)
-#     SECRET_KEY = os.environ.get('SECRET_KEY')
-#     API_KEY = os.environ.get('API_KEY')
-# else: # For deployment server only
-#     dotenv.load_dotenv()
-#     SECRET_KEY = os.environ.get('SECRET_KEY')
-#     API_KEY = os.environ.get('API_KEY')
-
-
 dotenv_file = os.path.join(BASE_DIR, ".env")
-dotenv.load_dotenv()
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+else: # For deployment server only
+    dotenv.load_dotenv()
+
+
 SECRET_KEY = os.environ.get('SECRET_KEY')
 API_KEY = os.environ.get('API_KEY')
 
