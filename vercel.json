@@ -19,12 +19,12 @@
 	],
 	"routes": [
 	  {
-		"src": "/(.*)",
-		"dest": "codingvidz-project/wsgi.py"
-	  },
-	  {
 		"src": "/static/(.*)",
 		"dest": "/static/$1"
+	  },
+	  {
+		"src": "/(.*)",
+		"dest": "codingvidz-project/wsgi.py"
 	  }
 	]
   }
