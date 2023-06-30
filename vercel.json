@@ -22,5 +22,5 @@
 		"dest": "codingvidz-project/wsgi.py"
 	  }
 	],
-    "outputDirectory": "staticfiles_build"
+    "outputDirectory": "static"
   }
