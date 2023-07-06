@@ -1,1 +1,1 @@
-web: gunicorn codingvidz-project.wsgi --log-file -
+web: gunicorn codingvidz.wsgi --log-file -
