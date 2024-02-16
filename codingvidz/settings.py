@@ -17,14 +17,13 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-
 SECRET_KEY = os.environ.get('SECRET_KEY')
 API_KEY = os.environ.get('API_KEY')
 
 DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-# ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(' ')
 SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', '0').lower() in ['true', 't', '1']
